@@ -57,6 +57,9 @@ class WindowDesign(QMainWindow):
             im_pixmap = QtGui.QPixmap(self.current_file)
             im_pixmap = im_pixmap.scaled(441, 441)
             self.mr_image.setPixmap(im_pixmap)
+            self.actual(self.current_file)
+            self.cnn_testing(self.current_file)
+            self.yolo_testing(self.current_file)
 
     def open_directory(self):
         directory = str(QFileDialog.getExistingDirectory(self, "Select Directory"))
